@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo Disaster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #e8e6e1;
+    --text: #1a1916;
+    --muted: #8a8880;
+    --rule: #c8c5be;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* subtle noise texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+    text-align: left;
+  }
+
+  .logo-wordmark {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+    color: var(--text);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.15em;
+  }
+
+  .logo-sub {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 300;
+    font-size: 0.65rem;
+    letter-spacing: 0.32em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+
+  .rule {
+    width: 40px;
+    height: 1px;
+    background: var(--rule);
+    margin: 0 0 3rem;
+  }
+
+  .logo-img {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 0 2rem;
+    display: block;
+  }
+
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contact-label {
+    font-size: 1rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    font-family: 'EB Garamond', serif;
+  }
+
+  .contact-value {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+    font-weight: 400;
+  }
+
+  .contact-value:hover {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 10px;
+    background: var(--rule);
+    flex-shrink: 0;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: 'EB Garamond', serif;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <img src="IMG_4572.png" alt="Leonardo Disaster" class="logo-img">
+
+  <div class="rule"></div>
+
+  <ul class="contact-list">
+    <li>
+      <span class="contact-label">Mail</span>
+      <a href="mailto:hello@leonardodisaster.com" class="contact-value">hello@leonardodisaster.com</a>
+    </li>
+    <li>
+      <span class="contact-label">Instagram</span>
+      <a href="https://instagram.com/leonardodisaster" target="_blank" rel="noopener" class="contact-value">@leonardodisaster</a>
+    </li>
+    <li>
+      <span class="contact-label">Phone</span>
+      <a href="tel:+447384853800" class="contact-value">07384 853 800</a>
+    </li>
+  </ul>
