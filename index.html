@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo Disaster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #080807;
+    --text: #c8c4ba;
+    --muted: #5a5750;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  body {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .logo-wrap {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .logo-img {
+    width: clamp(260px, 40vw, 480px);
+  }
+
+  .contact {
+    position: fixed;
+    bottom: 3rem;
+    left: 3.5rem;
+    z-index: 1;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .contact-label {
+    font-size: 1rem;
+    color: var(--muted);
+  }
+
+  .contact-value {
+    font-size: 1rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .contact-value:hover {
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="logo-wrap">
+  <video autoplay loop muted playsinline class="logo-img">
+    <source src="krea_video_download_B2A09EF7-A3B3-42A8-8161-C0DCB4E01966.MP4" type="video/mp4">
+  </video>
+</div>
+
+<ul class="contact">
+  <li>
+    <span class="contact-label">Mail</span>
+    <span class="contact-value">hello&#64;leonardodisaster&#46;com</span>
+  </li>
+  <li>
+    <span class="contact-label">Instagram</span>
+    <a href="https://instagram.com/leonardo_disaster" target="_blank" rel="noopener" class="contact-value">@leonardo_disaster</a>
+  </li>
+  <li>
