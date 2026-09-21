@@ -11,6 +11,7 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
+    --s: 1.5;            /* pixel scale for the badge + icon: 1.5 = crisp 3x3 dots on retina */
     --bg: #080807;
     --text: #c8c4ba;
     --muted: #5a5750;
@@ -116,9 +117,8 @@
 
   /* --- TAKING ORDERS badge: pixel terminal button --- */
   .badge {
-    --s: 1.5;                               /* pixel scale: 1.5 = crisp 3x3 dots on retina */
     position: fixed;
-    right: 3.5rem;                          /* mirrors the Instagram glyph on the left */
+    right: 0;                               /* flush to the right edge of the page */
     bottom: calc(3rem + 13px - 47px * var(--s) / 2);   /* centred on the glyph */
     z-index: 2;
     display: block;
@@ -197,7 +197,7 @@
   }
 
   @media (max-width: 640px) {
-    .badge { --s: 1; right: 1.25rem; }
+    :root { --s: 1; }
   }
 
   @media (prefers-reduced-motion: reduce) {
